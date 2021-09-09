@@ -16,8 +16,6 @@ function rawquire({ references, state, babel })
 			return;
 		}
 
-		console.log(path.dirname(sourceDir));
-
 		const callRef      = reference.parentPath;
 		const shortPath    = callRef.get("arguments")[0].evaluate().value;
 		const templatePath = path.join(path.dirname(sourceDir), shortPath);
